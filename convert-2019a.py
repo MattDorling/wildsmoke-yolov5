@@ -16,8 +16,8 @@ with open(f'{setpath}.csv', 'rt') as file:
         filename = filename.split('.')[0]
         print(filename)
         class_index = 0
-        bbox_x_center = (minX + maxX) / w
-        bbox_y_center = (minY + maxY) / h
+        bbox_x_center = ((minX + maxX))/2 / w
+        bbox_y_center = ((minY + maxY))/2 / h
         bbox_width = (maxX - minX) / w
         bbox_height = (maxY - minY) / h
         with open(f'{setpath.parent}/labels/{filename}.txt', 'w') as newfile:
