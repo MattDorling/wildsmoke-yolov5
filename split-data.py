@@ -4,6 +4,10 @@ import shutil
 
 data = os.listdir('data/images')
 train, test = train_test_split(data, train_size=0.75, random_state=1)
+os.mkdir('data/images/train')
+os.mkdir('data/images/valid')
+os.mkdir('data/labels/train')
+os.mkdir('data/labels/valid')
 
 for fn in train:
     label_fn = str(fn).split('.')[0] + '.txt'
